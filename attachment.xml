@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+        <menuitem
+            name="Multiple Attachment"
+            id="main_menu_multiple_attachment"
+            parent="ir.menu_administration"/>
+
+        <record model="ir.ui.view" id="view_multiple_attachment_tree">
+            <field name="model">multiple.attachment</field>
+            <field name="type">tree</field>
+            <field name="name">multiple_attachment_tree</field>
+        </record>
+        <record model="ir.ui.view" id="view_multiple_attachment_form">
+            <field name="model">multiple.attachment</field>
+            <field name="type">form</field>
+            <field name="name">multiple_attachment_form</field>
+        </record>
+        <record model="ir.action.act_window" id="action_multiple_attachment">
+            <field name="name">Multiple Attachment</field>
+            <field name="res_model">multiple.attachment</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_multiple_attachment_view_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="view_multiple_attachment_tree"/>
+            <field name="act_window" ref="action_multiple_attachment"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_multiple_attachment_view_form">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="view_multiple_attachment_form"/>
+            <field name="act_window" ref="action_multiple_attachment"/>
+        </record>
+        <menuitem
+            action="action_multiple_attachment"
+            id="menu_multiple_attachment"
+            parent="main_menu_multiple_attachment"/>
+
+        <record model="ir.ui.view" id="view_multiple_attachment_wizard_start">
+            <field name="model">multiple.attachment.wizard.start</field>
+            <field name="type">form</field>
+            <field name="name">multiple_attachment_wizard_start</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_multiple_attachment">
+            <field name="name">Multiple Attachment</field>
+            <field name="wiz_name">multiple.attachment.wizard</field>
+        </record>
+
+        <record model="ir.model.access" id="access_multiple_attachment">
+            <field name="model" search="[('model', '=', 'multiple.attachment')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_multiple_attachment_admin">
+            <field name="model" search="[('model', '=', 'multiple.attachment')]"/>
+            <field name="group" ref="res.group_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+    </data>
+</tryton>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!--The COPYRIGHT file at the top level of this repository
+contains the full copyright notices and license terms. -->
+<form string="Multiple Attachment Wizard">
+    <separator string="Select file to attach to records."
+        colspan="4" id="records"/>
+<!--     <label name="attachment"/> -->
+<!--     <field name="attachment"/> -->
+<!--     <field name="records"/> -->
+</form>

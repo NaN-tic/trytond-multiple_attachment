@@ -1,0 +1,103 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:multiple.attachment:"
+msgid "Model \"%s\" does not store information to an SQL table."
+msgstr "El modelo \"%s\" no almacena información en la table SQL."
+
+msgctxt "error:multiple.attachment:"
+msgid "Multiple Attachment must be unique per model."
+msgstr "Adjunto múltiple debe ser único por modelo."
+
+msgctxt "error:multiple.attachment:"
+msgid "unique_model"
+msgstr "unique_model"
+
+msgctxt "field:multiple.attachment,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:multiple.attachment,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:multiple.attachment,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:multiple.attachment,keyword:"
+msgid "Wizard"
+msgstr "Asistente"
+
+msgctxt "field:multiple.attachment,model:"
+msgid "Model"
+msgstr "Modelo"
+
+msgctxt "field:multiple.attachment,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:multiple.attachment,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:multiple.attachment,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:multiple.attachment.wizard.start,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "model:ir.action,name:action_multiple_attachment"
+msgid "Multiple Attachment"
+msgstr "Adjunto múltiple"
+
+msgctxt "model:ir.action,name:wizard_multiple_attachment"
+msgid "Multiple Attachment"
+msgstr "Adjunto múltiple"
+
+msgctxt "model:ir.ui.menu,name:main_menu_multiple_attachment"
+msgid "Multiple Attachment"
+msgstr "Adjunto múltiple"
+
+msgctxt "model:ir.ui.menu,name:menu_multiple_attachment"
+msgid "Multiple Attachment"
+msgstr "Adjunto múltiple"
+
+msgctxt "model:multiple.attachment,name:"
+msgid "Multiple Attachment"
+msgstr "Adjunto múltiple"
+
+msgctxt "model:multiple.attachment.wizard.start,name:"
+msgid "Multiple Attachment Wizard Start"
+msgstr "Inicio asistente adjunto múltiple"
+
+msgctxt "view:multiple.attachment.wizard.start:"
+msgid "Multiple Attachment Wizard"
+msgstr "Asistente adjunto múltiple"
+
+msgctxt "view:multiple.attachment.wizard.start:"
+msgid "Select file to attach to records."
+msgstr "Seleccione archivos para adjuntar a los registros."
+
+msgctxt "view:multiple.attachment:"
+msgid "Create Wizard"
+msgstr "Crear asistente"
+
+msgctxt "view:multiple.attachment:"
+msgid "Multiple Attachment"
+msgstr "Adjunto múltiple"
+
+msgctxt "view:multiple.attachment:"
+msgid "Remove Wizard"
+msgstr "Borrar asistente"
+
+msgctxt "wizard_button:multiple.attachment.wizard,start,attach:"
+msgid "Attach"
+msgstr "Adjuntar"
+
+msgctxt "wizard_button:multiple.attachment.wizard,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
