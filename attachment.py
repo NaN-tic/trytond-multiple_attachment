@@ -14,7 +14,7 @@ __all__ = ['MultipleAttachment', 'MultipleAttachmentWizardStart',
 __metaclass__ = PoolMeta
 
 
-class MultipleAttachment(ModelSQL, ModelView, ModelDynamic):
+class MultipleAttachment(ModelSQL, ModelView):
     'Multiple Attachment'
     __name__ = 'multiple.attachment'
     model = fields.Many2One('ir.model', 'Model', required=True)
