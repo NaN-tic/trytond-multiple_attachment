@@ -119,6 +119,12 @@ class MultipleAttachmentWizardStart(ModelView):
     @classmethod
     def fields_view_get(cls, view_id=None, view_type='form'):
         pool = Pool()
+        View = pool.get('ir.ui.view')
+        attachment_view, = View.search([
+                ('model', '=', 'ir.attachment'),
+                ('type', '=', 'tree'),
+                ('module', '=', 'multiple_attachment'),
+                ])
         res = super(MultipleAttachmentWizardStart, cls).fields_view_get(
             view_id, view_type)
         context = Transaction().context
@@ -137,6 +143,7 @@ class MultipleAttachmentWizardStart(ModelView):
         etree.SubElement(form, 'field', {
                 'name': 'attachment',
                 'colspan': '2',
+                'view_ids': '%s' % attachment_view.id,
                 })
         etree.SubElement(form, 'field', {
                 'name': 'records',
