@@ -74,6 +74,10 @@ msgctxt "model:multiple.attachment.wizard.start,name:"
 msgid "Multiple Attachment Wizard Start"
 msgstr "Inicio asistente adjunto múltiple"
 
+msgctxt "view:ir.attachment:"
+msgid "Attachments"
+msgstr "Adjuntos"
+
 msgctxt "view:multiple.attachment.wizard.start:"
 msgid "Multiple Attachment Wizard"
 msgstr "Asistente adjunto múltiple"

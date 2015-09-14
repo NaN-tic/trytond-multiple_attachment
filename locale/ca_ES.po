@@ -16,11 +16,11 @@ msgstr "unique_model"
 
 msgctxt "field:multiple.attachment,create_date:"
 msgid "Create Date"
-msgstr "Data de creació"
+msgstr "Data creació"
 
 msgctxt "field:multiple.attachment,create_uid:"
 msgid "Create User"
-msgstr "Usuari de creació"
+msgstr "Usuari creació"
 
 msgctxt "field:multiple.attachment,id:"
 msgid "ID"
@@ -73,6 +73,10 @@ msgstr "Adjunt múltiple"
 msgctxt "model:multiple.attachment.wizard.start,name:"
 msgid "Multiple Attachment Wizard Start"
 msgstr "Inici assistent adjunt múltiple"
+
+msgctxt "view:ir.attachment:"
+msgid "Attachments"
+msgstr "Adjunts"
 
 msgctxt "view:multiple.attachment.wizard.start:"
 msgid "Multiple Attachment Wizard"
