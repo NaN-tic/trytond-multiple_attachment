@@ -7,12 +7,8 @@ msgid "Model \"%s\" does not store information to an SQL table."
 msgstr "El model \"%s\" no emmagatzema informació a la taula SQL."
 
 msgctxt "error:multiple.attachment:"
-msgid "Multiple Attachment must be unique per model."
+msgid "Múltiples adjunts must be unique per model."
 msgstr "L'adjunt múltiple ha de ser únic per model."
-
-msgctxt "error:multiple.attachment:"
-msgid "unique_model"
-msgstr "unique_model"
 
 msgctxt "field:multiple.attachment,create_date:"
 msgid "Create Date"
@@ -51,27 +47,27 @@ msgid "ID"
 msgstr "Id"
 
 msgctxt "model:ir.action,name:action_multiple_attachment"
-msgid "Multiple Attachment"
+msgid "Múltiples adjunts"
 msgstr "Adjunt múltiple"
 
 msgctxt "model:ir.action,name:wizard_multiple_attachment"
-msgid "Multiple Attachment"
+msgid "Múltiples adjunts"
 msgstr "Adjunt múltiple"
 
 msgctxt "model:ir.ui.menu,name:main_menu_multiple_attachment"
-msgid "Multiple Attachment"
+msgid "Múltiples adjunts"
 msgstr "Adjunt múltiple"
 
 msgctxt "model:ir.ui.menu,name:menu_multiple_attachment"
-msgid "Multiple Attachment"
+msgid "Múltiples adjunts"
 msgstr "Adjunt múltiple"
 
 msgctxt "model:multiple.attachment,name:"
-msgid "Multiple Attachment"
+msgid "Múltiples adjunts"
 msgstr "Adjunt múltiple"
 
 msgctxt "model:multiple.attachment.wizard.start,name:"
-msgid "Multiple Attachment Wizard Start"
+msgid "Múltiples adjunts Wizard Start"
 msgstr "Inici assistent adjunt múltiple"
 
 msgctxt "view:ir.attachment:"
@@ -79,7 +75,7 @@ msgid "Attachments"
 msgstr "Adjunts"
 
 msgctxt "view:multiple.attachment.wizard.start:"
-msgid "Multiple Attachment Wizard"
+msgid "Múltiples adjunts Wizard"
 msgstr "Assistent adjunt múltiple"
 
 msgctxt "view:multiple.attachment.wizard.start:"
@@ -91,7 +87,7 @@ msgid "Create Wizard"
 msgstr "Crea assistent"
 
 msgctxt "view:multiple.attachment:"
-msgid "Multiple Attachment"
+msgid "Múltiples adjunts"
 msgstr "Adjunt múltiple"
 
 msgctxt "view:multiple.attachment:"

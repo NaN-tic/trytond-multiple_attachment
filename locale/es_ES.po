@@ -8,11 +8,7 @@ msgstr "El modelo \"%s\" no almacena información en la table SQL."
 
 msgctxt "error:multiple.attachment:"
 msgid "Multiple Attachment must be unique per model."
-msgstr "Adjunto múltiple debe ser único por modelo."
-
-msgctxt "error:multiple.attachment:"
-msgid "unique_model"
-msgstr "unique_model"
+msgstr "Múltiples adjuntos debe ser único por modelo."
 
 msgctxt "field:multiple.attachment,create_date:"
 msgid "Create Date"
@@ -52,27 +48,27 @@ msgstr "ID"
 
 msgctxt "model:ir.action,name:action_multiple_attachment"
 msgid "Multiple Attachment"
-msgstr "Adjunto múltiple"
+msgstr "Múltiples adjuntos"
 
 msgctxt "model:ir.action,name:wizard_multiple_attachment"
 msgid "Multiple Attachment"
-msgstr "Adjunto múltiple"
+msgstr "Múltiples adjuntos"
 
 msgctxt "model:ir.ui.menu,name:main_menu_multiple_attachment"
 msgid "Multiple Attachment"
-msgstr "Adjunto múltiple"
+msgstr "Múltiples adjuntos"
 
 msgctxt "model:ir.ui.menu,name:menu_multiple_attachment"
 msgid "Multiple Attachment"
-msgstr "Adjunto múltiple"
+msgstr "Múltiples adjuntos"
 
 msgctxt "model:multiple.attachment,name:"
 msgid "Multiple Attachment"
-msgstr "Adjunto múltiple"
+msgstr "Múltiples adjuntos"
 
 msgctxt "model:multiple.attachment.wizard.start,name:"
 msgid "Multiple Attachment Wizard Start"
-msgstr "Inicio asistente adjunto múltiple"
+msgstr "Inicio asistente Múltiples adjuntos"
 
 msgctxt "view:ir.attachment:"
 msgid "Attachments"
@@ -80,7 +76,7 @@ msgstr "Adjuntos"
 
 msgctxt "view:multiple.attachment.wizard.start:"
 msgid "Multiple Attachment Wizard"
-msgstr "Asistente adjunto múltiple"
+msgstr "Asistente Múltiples adjuntos"
 
 msgctxt "view:multiple.attachment.wizard.start:"
 msgid "Select file to attach to records."
@@ -92,7 +88,7 @@ msgstr "Crear asistente"
 
 msgctxt "view:multiple.attachment:"
 msgid "Multiple Attachment"
-msgstr "Adjunto múltiple"
+msgstr "Múltiples adjuntos"
 
 msgctxt "view:multiple.attachment:"
 msgid "Remove Wizard"

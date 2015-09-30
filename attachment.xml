@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <tryton>
     <data>
-
         <menuitem
             name="Multiple Attachment"
             id="main_menu_multiple_attachment"
@@ -17,6 +16,7 @@
             <field name="type">form</field>
             <field name="name">multiple_attachment_form</field>
         </record>
+
         <record model="ir.action.act_window" id="action_multiple_attachment">
             <field name="name">Multiple Attachment</field>
             <field name="res_model">multiple.attachment</field>
