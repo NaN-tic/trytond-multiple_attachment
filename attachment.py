@@ -3,7 +3,7 @@
 # copyright notices and license terms.
 from lxml import etree
 from trytond.model import ModelView, ModelSQL, fields, Unique
-from trytond.pool import Pool, PoolMeta
+from trytond.pool import Pool
 from trytond.pyson import Eval
 from trytond.transaction import Transaction
 from trytond.wizard import Button, StateView, StateTransition, Wizard
@@ -11,7 +11,6 @@ from trytond.wizard import Button, StateView, StateTransition, Wizard
 
 __all__ = ['MultipleAttachment', 'MultipleAttachmentWizardStart',
     'MultipleAttachmentWizard']
-__metaclass__ = PoolMeta
 
 
 class MultipleAttachment(ModelSQL, ModelView):
