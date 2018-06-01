@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!--The COPYRIGHT file at the top level of this repository
 contains the full copyright notices and license terms. -->
-<form string="Multiple Attachment">
+<form>
     <label name="model"/>
     <field name="model"/>
     <group id="buttons" colspan="4">
         <field name="keyword" invisible="1"/>
-        <button name="create_wizard" string="Create Wizard"/>
-        <button name="remove_wizard" string="Remove Wizard"/>
+        <button name="create_wizard"/>
+        <button name="remove_wizard"/>
     </group>
 </form>
