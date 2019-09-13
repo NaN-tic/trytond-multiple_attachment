@@ -7,7 +7,8 @@ from trytond.pool import Pool
 from trytond.pyson import Eval
 from trytond.transaction import Transaction
 from trytond.wizard import Button, StateView, StateTransition, Wizard
-
+from trytond.i18n import gettext
+from trytond.exceptions import UserError
 
 __all__ = ['MultipleAttachment', 'MultipleAttachmentWizardStart',
     'MultipleAttachmentWizard']
@@ -27,10 +28,6 @@ class MultipleAttachment(ModelSQL, ModelView):
             ('model_uniq', Unique(t, t.model),
                 'Multiple Attachment must be unique per model.'),
         ]
-        cls._error_messages.update({
-                'not_modelsql': 'Model "%s" does not store information '
-                    'to an SQL table.',
-                })
         cls._buttons.update({
                 'create_wizard': {
                     'invisible': Eval('keyword'),
@@ -46,8 +43,8 @@ class MultipleAttachment(ModelSQL, ModelView):
         for multi_attachment in multi_attachments:
             Model = Pool().get(multi_attachment.model.model)
             if not issubclass(Model, ModelSQL):
-                cls.raise_user_error('not_modelsql',
-                    (multi_attachment.model.rec_name,))
+                raise UserError(gettext('multiple_attachment.not_modelsql',
+                    model=multi_attachment.model.rec_name))
 
     @classmethod
     @ModelView.button
