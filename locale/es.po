@@ -1,26 +1,6 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
-
-msgctxt "error:multiple.attachment:"
-msgid "Model \"%s\" does not store information to an SQL table."
-msgstr "El modelo \"%s\" no almacena información en la table SQL."
-
-msgctxt "error:multiple.attachment:"
-msgid "Multiple Attachment must be unique per model."
-msgstr "Múltiples adjuntos debe ser único por modelo."
-
-msgctxt "field:multiple.attachment,create_date:"
-msgid "Create Date"
-msgstr "Fecha creación"
-
-msgctxt "field:multiple.attachment,create_uid:"
-msgid "Create User"
-msgstr "Usuario creación"
-
-msgctxt "field:multiple.attachment,id:"
-msgid "ID"
-msgstr "ID"
 
 msgctxt "field:multiple.attachment,keyword:"
 msgid "Wizard"
@@ -30,22 +10,6 @@ msgctxt "field:multiple.attachment,model:"
 msgid "Model"
 msgstr "Modelo"
 
-msgctxt "field:multiple.attachment,rec_name:"
-msgid "Name"
-msgstr "Nombre"
-
-msgctxt "field:multiple.attachment,write_date:"
-msgid "Write Date"
-msgstr "Fecha modificación"
-
-msgctxt "field:multiple.attachment,write_uid:"
-msgid "Write User"
-msgstr "Usuario modificación"
-
-msgctxt "field:multiple.attachment.wizard.start,id:"
-msgid "ID"
-msgstr "ID"
-
 msgctxt "model:ir.action,name:action_multiple_attachment"
 msgid "Multiple Attachment"
 msgstr "Múltiples adjuntos"
@@ -53,6 +17,18 @@ msgstr "Múltiples adjuntos"
 msgctxt "model:ir.action,name:wizard_multiple_attachment"
 msgid "Multiple Attachment"
 msgstr "Múltiples adjuntos"
+
+msgctxt "model:ir.message,text:not_modelsql"
+msgid "Model \"%(model)s\" does not store information to an SQL table."
+msgstr ""
+
+msgctxt "model:ir.model.button,string:create_wizard_button"
+msgid "Create Wizard"
+msgstr "Crear asistente"
+
+msgctxt "model:ir.model.button,string:remove_wizard_button"
+msgid "Remove Wizard"
+msgstr "Borrar asistente"
 
 msgctxt "model:ir.ui.menu,name:main_menu_multiple_attachment"
 msgid "Multiple Attachment"
@@ -73,10 +49,6 @@ msgstr "Inicio asistente Múltiples adjuntos"
 msgctxt "view:ir.attachment:"
 msgid "Attachments"
 msgstr "Adjuntos"
-
-msgctxt "view:multiple.attachment.wizard.start:"
-msgid "Multiple Attachment Wizard"
-msgstr "Asistente Múltiples adjuntos"
 
 msgctxt "view:multiple.attachment.wizard.start:"
 msgid "Select file to attach to records."
