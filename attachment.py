@@ -10,9 +10,6 @@ from trytond.wizard import Button, StateView, StateTransition, Wizard
 from trytond.i18n import gettext
 from trytond.exceptions import UserError
 
-__all__ = ['MultipleAttachment', 'MultipleAttachmentWizardStart',
-    'MultipleAttachmentWizard']
-
 
 class MultipleAttachment(ModelSQL, ModelView):
     'Multiple Attachment'

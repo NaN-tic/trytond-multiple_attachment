@@ -2,14 +2,14 @@
 # The COPYRIGHT file at the top level of this repository contains the full
 # copyright notices and license terms.
 from trytond.pool import Pool
-from .attachment import *
+from . import attachment
 
 
 def register():
     Pool.register(
-        MultipleAttachment,
-        MultipleAttachmentWizardStart,
+        attachment.MultipleAttachment,
+        attachment.MultipleAttachmentWizardStart,
         module='multiple_attachment', type_='model')
     Pool.register(
-        MultipleAttachmentWizard,
+        attachment.MultipleAttachmentWizard,
         module='multiple_attachment', type_='wizard')
