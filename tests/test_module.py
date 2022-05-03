@@ -6,7 +6,7 @@ from trytond.modules.company.tests import CompanyTestMixin
 from trytond.tests.test_tryton import ModuleTestCase
 
 
-class MultipleAttachmentTestCase(CompanyTestMixin, ModuleTestCase):
+class MultipleAttachmentTestCase(ModuleTestCase):
     'Test MultipleAttachment module'
     module = 'multiple_attachment'
 
