@@ -47,14 +47,14 @@
         </record>
 
         <record model="ir.model.access" id="access_multiple_attachment">
-            <field name="model" search="[('model', '=', 'multiple.attachment')]"/>
+            <field name="model">multiple.attachment</field>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_multiple_attachment_admin">
-            <field name="model" search="[('model', '=', 'multiple.attachment')]"/>
+            <field name="model">multiple.attachment</field>
             <field name="group" ref="res.group_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -70,12 +70,12 @@
         <record model="ir.model.button" id="remove_wizard_button">
             <field name="name">remove_wizard</field>
             <field name="string">Remove Wizard</field>
-            <field name="model" search="[('model', '=', 'multiple.attachment')]"/>
+            <field name="model">multiple.attachment</field>
         </record>
         <record model="ir.model.button" id="create_wizard_button">
             <field name="name">create_wizard</field>
             <field name="string">Create Wizard</field>
-            <field name="model" search="[('model', '=', 'multiple.attachment')]"/>
+            <field name="model">multiple.attachment</field>
         </record>
     </data>
 </tryton>
