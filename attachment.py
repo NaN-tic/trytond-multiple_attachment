@@ -8,7 +8,7 @@ from trytond.pyson import Eval
 from trytond.transaction import Transaction
 from trytond.wizard import Button, StateView, StateTransition, Wizard
 from trytond.i18n import gettext
-from trytond.exceptions import UserError
+from trytond.model.exceptions import ValidationError
 
 
 class MultipleAttachment(ModelSQL, ModelView):
@@ -40,7 +40,7 @@ class MultipleAttachment(ModelSQL, ModelView):
         for multi_attachment in multi_attachments:
             Model = Pool().get(multi_attachment.model.model)
             if not issubclass(Model, ModelSQL):
-                raise UserError(gettext('multiple_attachment.not_modelsql',
+                raise ValidationError(gettext('multiple_attachment.not_modelsql',
                     model=multi_attachment.model.rec_name))
 
     @classmethod
