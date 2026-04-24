@@ -4,7 +4,7 @@
 from lxml import etree
 from trytond.model import ModelView, ModelSQL, fields, Unique
 from trytond.pool import Pool
-from trytond.pyson import Eval
+from trytond.pyson import Bool, Eval
 from trytond.transaction import Transaction
 from trytond.wizard import Button, StateView, StateTransition, Wizard
 from trytond.i18n import gettext
@@ -27,10 +27,10 @@ class MultipleAttachment(ModelSQL, ModelView):
         ]
         cls._buttons.update({
                 'create_wizard': {
-                    'invisible': Eval('keyword'),
+                    'invisible': Bool(Eval('keyword')),
                     },
                 'remove_wizard': {
-                    'invisible': ~Eval('keyword'),
+                    'invisible': ~Bool(Eval('keyword')),
                     },
                 })
 
