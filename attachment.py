@@ -152,7 +152,8 @@ class MultipleAttachmentWizardStart(ModelView):
         return res
 
     @classmethod
-    def default_get(cls, fields, with_rec_name=True):
+    def default_get(
+            cls, fields_names=None, with_rec_name=True, with_default=True):
         context = Transaction().context
         active_ids = context.get('active_ids', None)
         res = {
