@@ -38,7 +38,7 @@ class MultipleAttachment(ModelSQL, ModelView):
     def validate(cls, multi_attachments):
         super(MultipleAttachment, cls).validate(multi_attachments)
         for multi_attachment in multi_attachments:
-            Model = Pool().get(multi_attachment.model.model)
+            Model = Pool().get(multi_attachment.model.name)
             if not issubclass(Model, ModelSQL):
                 raise ValidationError(gettext('multiple_attachment.not_modelsql',
                     model=multi_attachment.model.rec_name))
@@ -58,7 +58,7 @@ class MultipleAttachment(ModelSQL, ModelView):
                     'wizard_multiple_attachment'))
             keyword = Keyword()
             keyword.keyword = 'form_action'
-            keyword.model = '%s,-1' % multi_attachment.model.model
+            keyword.model = '%s,-1' % multi_attachment.model.name
             keyword.action = action.action
             keyword.save()
             multi_attachment.keyword = keyword
