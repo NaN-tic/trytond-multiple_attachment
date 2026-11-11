@@ -35,6 +35,44 @@ class MultipleAttachment(ModelSQL, ModelView):
                 })
 
     @classmethod
+    def __register__(cls, module_name):
+        super().__register__(module_name)
+        pool = Pool()
+        Action = pool.get('ir.action.wizard')
+        Keyword = pool.get('ir.action.keyword')
+        Model = pool.get('ir.model')
+        table = cls.__table__()
+        keyword = Keyword.__table__()
+        action = Action.__table__()
+        model = Model.__table__()
+        cursor = Transaction().connection.cursor()
+
+        # Replace shared actions with model-specific actions on upgrade.
+        cursor.execute(*table.join(keyword,
+                condition=table.keyword == keyword.id
+                ).join(action, condition=keyword.action == action.action
+                ).join(model, condition=table.model == model.id
+                ).select(keyword.id, action.id, model.name,
+                    where=(action.model == None)
+                    & (action.wiz_name == 'multiple.attachment.wizard')))
+        for keyword_id, action_id, model_name in cursor.fetchall():
+            new_action = cls._create_wizard_action(
+                Action(action_id), model_name)
+            Keyword.write([Keyword(keyword_id)], {
+                    'action': new_action.action.id,
+                    })
+
+    @classmethod
+    def _create_wizard_action(cls, template, model_name):
+        pool = Pool()
+        Action = pool.get('ir.action.wizard')
+        Keyword = pool.get('ir.action.keyword')
+        action, = Action.copy([template], {'model': model_name})
+        # The template keywords belong to other model configurations.
+        Keyword.delete(list(action.keywords))
+        return action
+
+    @classmethod
     def validate(cls, multi_attachments):
         super(MultipleAttachment, cls).validate(multi_attachments)
         for multi_attachment in multi_attachments:
@@ -54,8 +92,10 @@ class MultipleAttachment(ModelSQL, ModelView):
         for multi_attachment in multi_attachments:
             if multi_attachment.keyword:
                 continue
-            action = Action(ModelData.get_id('multiple_attachment',
+            template = Action(ModelData.get_id('multiple_attachment',
                     'wizard_multiple_attachment'))
+            action = cls._create_wizard_action(
+                template, multi_attachment.model.name)
             keyword = Keyword()
             keyword.keyword = 'form_action'
             keyword.model = '%s,-1' % multi_attachment.model.name
@@ -68,8 +108,16 @@ class MultipleAttachment(ModelSQL, ModelView):
     @ModelView.button
     def remove_wizard(cls, multi_attachments):
         pool = Pool()
+        Action = pool.get('ir.action.wizard')
         Keyword = pool.get('ir.action.keyword')
-        Keyword.delete([x.keyword for x in multi_attachments if x.keyword])
+        keywords = [x.keyword for x in multi_attachments if x.keyword]
+        actions = Action.search([
+                ('action', 'in', [k.action.id for k in keywords]),
+                ('wiz_name', '=', 'multiple.attachment.wizard'),
+                ('model', '!=', None),
+                ])
+        Keyword.delete(keywords)
+        Action.delete([a for a in actions if not a.keywords])
 
     @classmethod
     def delete(cls, multi_attachments):
