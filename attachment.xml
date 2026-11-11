@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <tryton>
     <data>
+        <record model="res.group" id="group_multiple_attachment">
+            <field name="name">Multiple Attachment</field>
+        </record>
+
         <menuitem
             name="Multiple Attachment"
             id="main_menu_multiple_attachment"
@@ -44,6 +48,11 @@
         <record model="ir.action.wizard" id="wizard_multiple_attachment">
             <field name="name">Multiple Attachment</field>
             <field name="wiz_name">multiple.attachment.wizard</field>
+        </record>
+        <record model="ir.action-res.group"
+                id="wizard_multiple_attachment-group_multiple_attachment">
+            <field name="action" ref="wizard_multiple_attachment"/>
+            <field name="group" ref="group_multiple_attachment"/>
         </record>
 
         <record model="ir.model.access" id="access_multiple_attachment">
